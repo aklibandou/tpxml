@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>  
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Météo</title>
+	  <script>
+		let villeCourante = "Paris"
+		function showCity() { alert(villeCourante); }
+		<body onload="showCity()">
+	  
+	  </script>
+	  <style>
+		
+		
+		
+		h1{
+			font-size: 35px;
+			text-align: center;
+			color: white;
+			background: black;
+		}
+		
+		p{
+			text-align:left;
+			font-size: 20px;
+		}
+		img{
+			float:right;
+			position:relative;
+			margin-right:100px;
+			bottom:40px;
+		}
+		
+		.ville{
+			display: flex;
+			flex-wrap:wrap;
+			justify-content: space-evenly;
+		 }
+		 
+		.ville div{
+			width:400px;
+			flex-grow: 1;
+			background: #D3D3D3;
+			margin : 15px;
+			padding:10px 10px;
+			
+		}
+		
+		.foot {
+		
+			margin-top: 35px;
+			width: 100%;
+			padding:10px 10px;
+			font-size: 10px; 
+			background: #D3D3D3;
+		}
+		
+		
+		
+		
+		
+	  </style>
+	</head>
+	<body>
+	
+		
+		
+			
+		<h1>TP Météo HTML</h1>
+			
+		<div class="ville">
+				<div>
+				
+					<p><strong>Paris</strong></p>
+					  <p >4°C, Ensoleillé 
+					 <img src="https://static.thenounproject.com/png/653889-200.png" alt="Le temps" width="80">
+					</p>
+				</div>
+			 
+				<div>
+				  <p><strong>Moscou</strong></p>
+					<p >-15°C, Neigeux
+					<img src="https://static.thenounproject.com/png/2343000-200.png" alt="Le temps" width="70">
+				  
+				  </p>
+				</div>
+				
+				<div>
+				  <p><strong>Berlin</strong></p>
+					<p >0°C, Pluvieux 
+					<img src="https://static.thenounproject.com/png/653382-200.png" alt="Le temps" width="70">
+				  </p>
+				</div>
+				
+			
+			</div>
+			<div class="foot"> 
+				<div>Akli BANDOU <br>
+				Icones météos par <a href="https://thenounproject.com/search/collection/?q=weather">Noun Project </a>
+				</div>
+		</div>
+		
+	</body>
+	
+	 
+	
+</html>
