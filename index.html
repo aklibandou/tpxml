@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Météo</title>
 		<style>
-			
+	
 			body, html{height:100%;}
 			body{
 				font-family: Arial, Helvetica, sans-serif;
@@ -123,11 +123,40 @@
 				font-style: italic;
 				
 			}
+			
 		</style>
-		
-		<script src="https://github.com/aklibandou/tpxml/blob/main/meteo.js"></script>
-		
-
+		<script>
+			
+				
+			
+			function showCity() {
+				let villeCourante = document.getElementById("city-select").value;
+				if(villeCourante!=""){
+					document.getElementById("selection").innerHTML= "Vous avez séléctionné "+villeCourante;
+				}else{
+					document.getElementById("selection").innerHTML= " ";
+				}
+				
+						
+				//let table = document.getElementsByClassName("city");
+				//let cells = table.getElementsByTagName("span");
+				let c = document.getElementsByTagName("span");
+				
+				console.log(c[0]);
+				for( let i=0;i<c.length;i++){
+					
+					if(c[i].id==villeCourante){
+						
+						c[i].style.display ="block";
+						
+					}else{
+						c[i].style.display ="";
+					}
+				}
+				
+				
+			}
+		</script>
 	  
 	</head>
 	<body >
