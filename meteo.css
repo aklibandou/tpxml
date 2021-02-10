@@ -8,6 +8,8 @@
 				
 			h1{
 				font-size: 35px;
+				position:relative;
+				
 				text-align: center;
 				color: white;
 				background: black;
@@ -102,7 +104,7 @@
 			
 			#selection{
 				font-color:red;
-				font-size:20px
+				font-size:15px
 				color: white;
 				background:yellow;
 			}
