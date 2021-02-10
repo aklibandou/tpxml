@@ -14,7 +14,74 @@
 			}
 				
 			h1{
-				font-size: 35px;
+				font-size: 35px;<!DOCTYPE html>
+<html>  
+	<head>
+		<meta charset="UTF-8">
+		<title>Météo</title>
+		<link type="text/css" rel="stylesheet" href="meteo.css">
+		<script src="https://github.com/aklibandou/tpxml/edit/main/meteo.js"></script>
+
+	  
+	</head>
+	<body >
+	
+		
+		
+			
+		<h1>TP Météo HTML</h1>
+		<div id="opt">
+			<label id="vil">Veillez selectionner une ville :</label>
+
+			<select  id="city-select" onchange="showCity()">
+				<option value="">--Choisissez une ville--</option>
+				<option value="Paris">Paris</option>
+				<option value="Moscou">Moscou</option>
+				<option value="Berlin">Berlin</option>
+			</select>
+		</div>
+		<p id="selection"></p>
+		<div class="world">
+				<div class="city">
+					<span id="Paris">
+						<p><strong><span >Paris</span></strong></p>
+						 <p>4°C, Ensoleillé 
+						 <img src="https://static.thenounproject.com/png/653889-200.png" alt="Le temps" >
+						</p>
+					</span>
+				</div>
+			 
+				<div class="city">
+					<span id="Moscou">
+						<p ><strong><span >Moscou</span></strong></p>
+						<p>-15°C, Neigeux
+						<img src="https://static.thenounproject.com/png/2343000-200.png" alt="Le temps">
+						</p>
+					</span>
+				</div>
+				
+				<div class="city">
+					<span id="Berlin">
+						<p ><strong><span >Berlin</span></strong></p>
+						<p>0°C, Pluvieux 
+						<img src="https://static.thenounproject.com/png/653382-200.png" alt="Le temps" >
+						</p>
+					</span>
+				</div>
+				
+			
+		</div>
+		<footer> 
+				<div>Akli BANDOU <br>
+				Icones météo par <a href="https://thenounproject.com/search/collection/?q=weather">Noun Project </a>
+				</div>
+		</footer>
+		
+	</body>
+	
+	 
+	
+</html>
 				text-align: center;
 				color: white;
 				background: black;
