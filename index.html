@@ -3,103 +3,185 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <title>Météo</title>
-	  <script>
-		let villeCourante = "Paris"
-		function showCity() { alert(villeCourante); }
-		<body onload="showCity()">
-	  
-	  </script>
-	  <style>
-		
-		
-		
-		h1{
-			font-size: 35px;
-			text-align: center;
-			color: white;
-			background: black;
-		}
-		
-		p{
-			text-align:left;
-			font-size: 20px;
-		}
-		img{
-			float:right;
-			position:relative;
-			margin-right:100px;
-			bottom:40px;
-		}
-		
-		.ville{
-			display: flex;
-			flex-wrap:wrap;
-			justify-content: space-evenly;
-		 }
-		 
-		.ville div{
-			width:400px;
-			flex-grow: 1;
-			background: #D3D3D3;
-			margin : 15px;
-			padding:10px 10px;
+		<title>Météo</title>
+		<style>
 			
-		}
+			body, html{height:100%;}
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+				height: 100vh
+				
+			}
+				
+			h1{
+				font-size: 35px;
+				text-align: center;
+				color: white;
+				background: black;
+				
+			}
+			
+			p{	
+				
+				
+				text-align:left;
+				font-size: 30px;
+			}
+			#selection{	
+				
+				text-align:center;
+				font-size: 20px;
+			}
+			
+			img{
+				float:right;
+				position:relative;
+				margin-right:50px;
+				
+				bottom:60px;
+				width:100px;
+				
+			}
+			
+			.world{
+				display: flex;
+				flex-wrap:wrap;
+				flex-direction:column;
+				flex-grow: 1;
+				justify-content: space-evenly;
+				
+				
+			}
+			.city{
+				display: flex;
+				flex-wrap:wrap;
+				flex-grow: 1;
+				justify-content: space-evenly;
+				
+				
+			}
+		 
+			
+			#Paris{
+				width:300px;
+				height:140px;
+				flex-grow: 1;
+				background: #D3D3D3;
+				margin : 15px;
+				padding:10px 35px ;
+				height:200px;
+				display:none;
+			}
+			#Moscou{
+				width:300px;
+				height:140px;
+				flex-grow: 1;
+				background: #D3D3D3;
+				margin : 15px;
+				padding:10px 35px ;
+				height:200px;
+				display:none;
+			
+			}
+			#Berlin{
+				width:300px;
+				height:140px;
+				flex-grow: 1;
+				background: #D3D3D3;
+				margin : 15px;
+				padding:10px 35px ;
+				height:200px;
+				display:none;
+			}
+			
+				
+			footer {
+			
+				margin-top: 25px;
+				width: 100%;
+				padding:10px 10px;
+				font-size: 10px; 
+				background: #D3D3D3;
+			}    
+			
+			#selection{
+				font-color:red;
+				font-size:20px
+				color: white;
+				background:yellow;
+			}
+			#opt {
+				display: flex;
+				flex-grow: 1;
+				justify-content: center;
+			}	
+			select{
+				margin-left: 10px;
+			}
+			label{
+				font-size: 20px;
+				font-style: italic;
+				
+			}
+		</style>
 		
-		.foot {
-		
-			margin-top: 35px;
-			width: 100%;
-			padding:10px 10px;
-			font-size: 10px; 
-			background: #D3D3D3;
-		}
-		
-		
-		
-		
-		
-	  </style>
+		<script>
+		</script>
+
+	  
 	</head>
-	<body>
+	<body >
 	
 		
 		
 			
 		<h1>TP Météo HTML</h1>
-			
-		<div class="ville">
-				<div>
-				
-					<p><strong>Paris</strong></p>
-					  <p >4°C, Ensoleillé 
-					 <img src="https://static.thenounproject.com/png/653889-200.png" alt="Le temps" width="80">
-					</p>
+		<div id="opt">
+			<label id="vil">Veillez selectionner une ville :</label>
+
+			<select  id="city-select" onchange="showCity()">
+				<option value="">--Choisissez une ville--</option>
+				<option value="Paris">Paris</option>
+				<option value="Moscou">Moscou</option>
+				<option value="Berlin">Berlin</option>
+			</select>
+		</div>
+		<p id="selection"></p>
+		<div class="world">
+				<div class="city">
+					<span id="Paris">
+						<p><strong><span >Paris</span></strong></p>
+						 <p>4°C, Ensoleillé 
+						 <img src="https://static.thenounproject.com/png/653889-200.png" alt="Le temps" >
+						</p>
+					</span>
 				</div>
 			 
-				<div>
-				  <p><strong>Moscou</strong></p>
-					<p >-15°C, Neigeux
-					<img src="https://static.thenounproject.com/png/2343000-200.png" alt="Le temps" width="70">
-				  
-				  </p>
+				<div class="city">
+					<span id="Moscou">
+						<p ><strong><span >Moscou</span></strong></p>
+						<p>-15°C, Neigeux
+						<img src="https://static.thenounproject.com/png/2343000-200.png" alt="Le temps">
+						</p>
+					</span>
 				</div>
 				
-				<div>
-				  <p><strong>Berlin</strong></p>
-					<p >0°C, Pluvieux 
-					<img src="https://static.thenounproject.com/png/653382-200.png" alt="Le temps" width="70">
-				  </p>
+				<div class="city">
+					<span id="Berlin">
+						<p ><strong><span >Berlin</span></strong></p>
+						<p>0°C, Pluvieux 
+						<img src="https://static.thenounproject.com/png/653382-200.png" alt="Le temps" >
+						</p>
+					</span>
 				</div>
 				
 			
-			</div>
-			<div class="foot"> 
-				<div>Akli BANDOU <br>
-				Icones météos par <a href="https://thenounproject.com/search/collection/?q=weather">Noun Project </a>
-				</div>
 		</div>
+		<footer> 
+				<div>Akli BANDOU <br>
+				Icones météo par <a href="https://thenounproject.com/search/collection/?q=weather">Noun Project </a>
+				</div>
+		</footer>
 		
 	</body>
 	
